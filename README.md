@@ -17,19 +17,20 @@ RecallRift is your local-first, AI-powered second brain that lets you capture an
 ## 📦 Getting Started
 
 ```
-git clone https://github.com/your-username/recallrift.git
+git clone https://github.com/ATHARVA262005/recallrift.git
 cd recallrift
 npm install
 npm run dev
 ```
 
-## 🤝 Contributing
+## 🌟 We Welcome Contributions!
 
-Please see [CONTRIBUTING.md](CONTRIBUTING.md)
+Found a bug? Have a feature idea? Just want to help? Read [CONTRIBUTING.md](CONTRIBUTING.md) and check out [Good First Issues](https://github.com/ATHARVA262005/recallrift/labels/good%20first%20issue)
+
 
 ## 🛡 License
 
-MIT — see `LICENSE` file.
+MIT — see [LICENSE](LICENSE) file.
 
 ---
 Created by **Atharva Ralegankar**
