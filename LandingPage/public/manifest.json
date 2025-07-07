@@ -1,0 +1,75 @@
+{
+  "name": "RecallRift - AI-Powered Second Brain",
+  "short_name": "RecallRift",
+  "description": "Transform your mind with RecallRift - the ultimate AI-powered second brain for knowledge management",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["productivity", "education", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "RecallRift Dashboard"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Launch Dashboard",
+      "short_name": "Dashboard",
+      "description": "Launch RecallRift Dashboard",
+      "url": "https://dashboard-recallrift.atharvaralegankar.tech",
+      "icons": [
+        {
+          "src": "/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "View Features",
+      "short_name": "Features",
+      "description": "Explore RecallRift Features",
+      "url": "/#features",
+      "icons": [
+        {
+          "src": "/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "GitHub Repository",
+      "short_name": "GitHub",
+      "description": "View Source Code on GitHub",
+      "url": "https://github.com/ATHARVA262005/recallrift",
+      "icons": [
+        {
+          "src": "/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

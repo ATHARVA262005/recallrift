@@ -11,6 +11,7 @@ import {
   BarChart3
 } from 'lucide-react';
 import { settingsService } from '../services/database';
+import logoImage from '../assets/logo/logo.ico';
 
 const Layout = ({ children }) => {
   const [isDark, setIsDark] = useState(false);
@@ -48,7 +49,11 @@ const Layout = ({ children }) => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <Brain className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+              <img 
+                src={logoImage} 
+                alt="RecallRift Logo" 
+                className="h-8 w-8 object-contain"
+              />
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">
                 RecallRift
               </h1>
@@ -147,7 +152,7 @@ const Layout = ({ children }) => {
       </nav>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {children}
       </main>
     </div>
