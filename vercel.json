@@ -1,8 +1,0 @@
-{
-  "framework": "vite",
-  "cleanUrls": true
-}ramework": "vite",
-  "cleanUrls": true,
-  "buildCommand": "cd LandingPage && npm install && npm run build",
-  "outputDirectory": "LandingPage/dist"
-}
