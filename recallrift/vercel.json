@@ -1,0 +1,6 @@
+{
+  "framework": "vite",
+  "cleanUrls": true,
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "dist"
+}

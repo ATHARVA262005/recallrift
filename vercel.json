@@ -1,35 +1,6 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "LandingPage/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "LandingPage/dist",
-        "installCommand": "cd LandingPage && npm install",
-        "buildCommand": "cd LandingPage && npm run build"
-      }
-    },
-    {
-      "src": "recallrift/package.json", 
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "recallrift/dist",
-        "installCommand": "cd recallrift && npm install",
-        "buildCommand": "cd recallrift && npm run build"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/dashboard(.*)",
-      "dest": "/recallrift$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/LandingPage/$1"  
-    }
-  ],
   "framework": "vite",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "buildCommand": "cd LandingPage && npm install && npm run build",
+  "outputDirectory": "LandingPage/dist"
 }
