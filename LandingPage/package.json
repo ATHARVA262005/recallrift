@@ -1,5 +1,5 @@
 {
-  "name": "recallrift",
+  "name": "landingpage",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,18 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
-    "@tailwindcss/vite": "^4.1.11",
-    "date-fns": "^4.1.0",
-    "dexie": "^4.0.11",
-    "fuse.js": "^7.1.0",
-    "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-helmet-async": "^2.0.5",
-    "react-hot-toast": "^2.5.2",
-    "react-router-dom": "^7.6.3",
-    "tailwindcss": "^4.1.11"
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",

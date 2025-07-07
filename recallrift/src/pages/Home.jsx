@@ -16,6 +16,7 @@ import EnhancedMemoryCard from '../components/EnhancedMemoryCard';
 import AdvancedSearch from '../components/AdvancedSearch';
 import MemoryTemplates from '../components/MemoryTemplates';
 import SmartCollections from '../components/SmartCollections';
+import SEO from '../components/SEO';
 import { notificationService } from '../services/notificationService';
 
 const Home = () => {
@@ -244,19 +245,38 @@ const Home = () => {
   ];
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Your Memory Vault
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400 mt-2">
-            {selectedCollection 
-              ? `Collection: ${selectedCollection.name}`
-              : 'Capture, organize, and rediscover your thoughts and ideas'
-            }
-          </p>
+    <>
+      <SEO 
+        title="RecallRift Dashboard - Your AI-Powered Memory Vault"
+        description="Manage your knowledge with RecallRift's intelligent dashboard. Create, organize, and search through your memories with AI-powered insights and analytics."
+        keywords="memory vault, knowledge dashboard, AI search, note management, digital memories, productivity dashboard, second brain interface"
+        url="/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "RecallRift Dashboard",
+          "description": "Main dashboard for managing memories and knowledge in RecallRift",
+          "url": "https://dashboard-recallrift.atharvaralegankar.tech/",
+          "mainEntity": {
+            "@type": "SoftwareApplication",
+            "name": "RecallRift Memory Vault",
+            "applicationCategory": "ProductivityApplication"
+          }
+        }}
+      />
+      <div className="space-y-6">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+              Your Memory Vault
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400 mt-2">
+              {selectedCollection 
+                ? `Collection: ${selectedCollection.name}`
+                : 'Capture, organize, and rediscover your thoughts and ideas'
+              }
+            </p>
         </div>
         
         <div className="flex items-center space-x-3">
@@ -452,7 +472,8 @@ const Home = () => {
           onClose={() => setIsTemplatesOpen(false)}
         />
       )}
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { memoryService, categoryService, settingsService } from '../services/database';
 import DataManager from '../components/DataManager';
+import SEO from '../components/SEO';
 
 const Settings = () => {
   const [activeTab, setActiveTab] = useState('general');
@@ -175,7 +176,27 @@ const Settings = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <>
+      <SEO 
+        title="Settings - RecallRift Configuration"
+        description="Configure your RecallRift experience. Manage AI settings, data preferences, appearance, and application settings for your personal knowledge management system."
+        keywords="settings, configuration, AI setup, data management, preferences, appearance, API key, theme settings, backup, export"
+        url="/settings"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "RecallRift Settings",
+          "description": "Configuration and settings page for RecallRift application",
+          "url": "https://dashboard-recallrift.atharvaralegankar.tech/settings",
+          "mainEntity": {
+            "@type": "SoftwareApplication",
+            "name": "RecallRift Settings Panel",
+            "applicationCategory": "ProductivityApplication",
+            "featureList": ["AI Configuration", "Data Management", "Theme Settings", "Export/Import"]
+          }
+        }}
+      />
+      <div className="max-w-4xl mx-auto">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Settings</h1>
         <p className="text-gray-600 dark:text-gray-400 mt-1">
@@ -461,6 +482,7 @@ const Settings = () => {
         <DataManager onClose={() => setIsDataManagerOpen(false)} />
       )}
     </div>
+    </>
   );
 };
 

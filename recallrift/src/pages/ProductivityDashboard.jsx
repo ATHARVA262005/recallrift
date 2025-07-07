@@ -16,6 +16,7 @@ import {
 import { memoryService } from '../services/database';
 import { aiService } from '../services/aiService';
 import { notificationService } from '../services/notificationService';
+import SEO from '../components/SEO';
 
 const ProductivityDashboard = () => {
   const [dashboardData, setDashboardData] = useState({
@@ -288,7 +289,27 @@ const ProductivityDashboard = () => {
   }
 
   return (
-    <div className="space-y-6">
+    <>
+      <SEO 
+        title="Analytics Dashboard - RecallRift Productivity Insights"
+        description="Track your knowledge creation patterns with RecallRift's analytics dashboard. View productivity trends, memory statistics, and insights to optimize your second brain workflow."
+        keywords="analytics, productivity dashboard, memory statistics, knowledge trends, productivity insights, data visualization, performance tracking, memory analytics"
+        url="/analytics"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "RecallRift Analytics Dashboard",
+          "description": "Productivity and analytics dashboard for tracking memory creation patterns and knowledge management insights",
+          "url": "https://dashboard-recallrift.atharvaralegankar.tech/analytics",
+          "mainEntity": {
+            "@type": "SoftwareApplication",
+            "name": "RecallRift Analytics",
+            "applicationCategory": "ProductivityApplication",
+            "featureList": ["Productivity Tracking", "Memory Analytics", "Trend Analysis", "Performance Insights"]
+          }
+        }}
+      />
+      <div className="space-y-6">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
@@ -532,6 +553,7 @@ const ProductivityDashboard = () => {
         Last updated: {lastUpdated.toLocaleString()}
       </div>
     </div>
+    </>
   );
 };
 

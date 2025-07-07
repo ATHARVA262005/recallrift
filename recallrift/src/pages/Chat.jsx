@@ -14,6 +14,7 @@ import {
 import { memoryService } from '../services/database';
 import { aiService } from '../services/aiService';
 import { notificationService } from '../services/notificationService';
+import SEO from '../components/SEO';
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -197,7 +198,27 @@ const Chat = () => {
   ];
 
   return (
-    <div className="flex flex-col h-[calc(100vh-12rem)] bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+    <>
+      <SEO 
+        title="Chat with Your Memories - RecallRift AI Assistant"
+        description="Interact with your knowledge using RecallRift's AI chat assistant. Ask questions, search memories naturally, and get intelligent insights from your personal knowledge base."
+        keywords="AI chat, memory search, intelligent assistant, natural language query, knowledge chat, memory assistant, AI conversation, smart search"
+        url="/chat"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "RecallRift Chat Assistant",
+          "description": "AI-powered chat interface for interacting with your memories and knowledge base",
+          "url": "https://dashboard-recallrift.atharvaralegankar.tech/chat",
+          "mainEntity": {
+            "@type": "SoftwareApplication",
+            "name": "RecallRift Chat Interface",
+            "applicationCategory": "ProductivityApplication",
+            "featureList": ["AI Chat", "Memory Search", "Natural Language Processing"]
+          }
+        }}
+      />
+      <div className="flex flex-col h-[calc(100vh-12rem)] bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center space-x-3">
@@ -373,6 +394,7 @@ const Chat = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

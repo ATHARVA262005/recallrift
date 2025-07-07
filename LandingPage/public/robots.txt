@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://recallrift.atharvaralegankar.tech/sitemap.xml
+
+# Disallow specific file types that shouldn't be indexed
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.json$
+
+# Allow important files
+Allow: /logo.png
+Allow: /og-image.png
+
+# Crawl-delay (optional)
+Crawl-delay: 1
